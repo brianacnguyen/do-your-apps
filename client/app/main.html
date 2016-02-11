@@ -7,6 +7,7 @@
                     <div class="intro-message">
                         <h1>DO YOUR APPS!</h1>
                         <h4>See how much you've lost/saved with your applications</h3>
+                        <h6 class="author">by brianacnguyen@gmail.com</h6>
                         <hr class="intro-divider">
                         <h4 ng-show="display.minAppsNeeded">The following calculation is based on 5 applications a day, 6 days a week</h4>
                         <div ng-show="display.minAppsNeeded">
@@ -18,19 +19,19 @@
                         <h2 class="neutral" ng-show="display.min.breakEven">Good job keeping it up with the minimum standards. You've kaled it!</h2>
                         <div ng-hide="display.min.lost || display.min.saved || display.min.breakEven">
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="salary-min">Minimum Desired Salary <br> (Numbers Only)</label>
+                                <label for="salary-min">Minimum Desired Salary <br> <div class="author">(Numbers Only)</div></label>
                                 <input name="salary-min" class="form" type="number" placeholder="70000" ng-model="minDesired">
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="salary-max">Maximum Desired Salary <br> (Numbers Only)</label>
+                                <label for="salary-max">Maximum Desired Salary <br> <div class="author">(Numbers Only)</div></label>
                                 <input name="salary-max" class="form" type="number" placeholder="150000" ng-model="maxDesired">
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="apps">Number of Apps Completed <br> (Numbers Only)</label>
+                                <label for="apps">Number of Apps Completed <br> <div class="author">(Numbers Only)</div></label>
                                 <input name="apps" class="form" type="number" placeholder="150" ng-model="appsCompleted">
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="dateStarted">Date Started<br> (Pick a Date)</label>
+                                <label for="dateStarted">Date Started<br> <div class="author">(Pick a Date)</div></label>
                                 <input name="dateStarted" class="form" type="date" placeholder="mm/dd/yyyy" ng-model="startDate">
                             </div>
                         </div>
