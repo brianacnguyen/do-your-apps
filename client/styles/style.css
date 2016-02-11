@@ -20,13 +20,13 @@ h6 {
     padding-bottom: 10px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../assets/background-neutral.jpg) no-repeat center center;
+    background: url(../assets/background-neutral.jpeg) no-repeat center center;
     background-size: cover;
 }
 
 .intro-message {
     position: relative;
-    padding-top: 10%;
+    padding-top: 15%;
     padding-bottom: 20%;
 }
 
