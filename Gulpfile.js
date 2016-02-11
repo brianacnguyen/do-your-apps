@@ -14,7 +14,6 @@ var paths = {
   scripts: ['client/app/**/*.js'],
   html: ['client/app/**/*.html', 'client/index.html'],
   styles: ['client/styles/style.css'],
-  test: ['specs/**/*.js']
 };
 
 // any changes made to your
@@ -30,9 +29,6 @@ gulp.task('start', ['serve'],function () {
   });
 });
 
-gulp.task('karma', shell.task([
-  'karma start'
-]));
 
 // start our node server using nodemon
 gulp.task('serve', function() {

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html ng-app='shortly'>
+<html ng-app='doYourApps'>
   <head>
     <meta charset="utf-8" />
-    <title>Shortly</title>
+    <title>DO YOUR APPS</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   </head>
   <body>
-    <h1>Shortly</h1>
 
-    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
 
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
 
-    <script src="app/auth/auth.js"></script>
-    <script src="app/links/links.js"></script>
-    <script src="app/shorten/shorten.js"></script>
-    <script src="app/services/services.js"></script>
+    <script src="app/main.js"></script>
     <script src="app/app.js"></script>
+    <div ng-view></div>
   </body>
 </html>

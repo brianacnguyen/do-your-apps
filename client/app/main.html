@@ -1,0 +1,49 @@
+
+    <div class="intro-header" ng-controller="MainController">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>DO YOUR APPS!</h1>
+                        <h4>See how much you've lost/saved with your applications</h3>
+                        <hr class="intro-divider">
+                        <h4 ng-show="display.minAppsNeeded">The following calculation is based on 5 applications a day, 6 days a week</h4>
+                        <div ng-show="display.minAppsNeeded">
+                            <h2>You've applied for <span class="neutral"> {{display.min.daysApplied}} </span> days. You should've applied to at least <span class="neutral"> {{display.min.minAppsNeeded}} </span> apps </h2>
+                            <h3> You've completed <span ng-class="{bad: display.min.lost, good: display.min.saved, neutral: display.min.breakEven}"> {{appsCompleted}} </span> apps</h3>
+                        </div>
+                        <h2 class="bad" ng-show="display.min.lost"> You've lost ~ {{display.min.amountLost}} - {{display.max.amountLost}}. You need to apply to 8 apps/day for {{display.min.daysToCatchUp}} days to catch up</h2>
+                        <h2 class="good" ng-show="display.min.saved">You've saved ~{{display.min.amountSaved}} - {{display.max.amountSaved}}. You've kaled it!</h2>
+                        <h2 class="neutral" ng-show="display.min.breakEven">Good job keeping it up with the minimum standards. You've kaled it!</h2>
+                        <div ng-hide="display.min.lost || display.min.saved || display.min.breakEven">
+                            <div class="col-sm-3 col-md-3 col-lg-3 forms">
+                                <label for="salary-min">Minimum Desired Salary <br> (Numbers Only)</label>
+                                <input name="salary-min" class="form" type="number" placeholder="70000" ng-model="minDesired">
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 forms">
+                                <label for="salary-max">Maximum Desired Salary <br> (Numbers Only)</label>
+                                <input name="salary-max" class="form" type="number" placeholder="150000" ng-model="maxDesired">
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 forms">
+                                <label for="apps">Number of Apps Completed <br> (Numbers Only)</label>
+                                <input name="apps" class="form" type="number" placeholder="150" ng-model="appsCompleted">
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 forms">
+                                <label for="dateStarted">Date Started<br> (Pick a Date)</label>
+                                <input name="dateStarted" class="form" type="date" placeholder="mm/dd/yyyy" ng-model="startDate">
+                            </div>
+                        </div>
+                        <hr class="intro-divider">
+                        <div>
+                            <button type="button" class="btn btn-default" ng-click="rangeCalculate()">Submit</button>
+                            <button type="button" ng-click="reset()" class="btn btn-default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>

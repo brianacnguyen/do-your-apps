@@ -15,11 +15,4 @@ Icon
 .Spotlight-V100
 .Trashes
 node_modules/
-db/
-client/lib
 
-# Floobits
-.floo
-.floobit
-.floo
-.flooignore
