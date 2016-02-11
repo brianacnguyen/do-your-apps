@@ -10,28 +10,28 @@
                         <h6 class="author">by brianacnguyen@gmail.com</h6>
                         <hr class="intro-divider">
                         <h4 ng-show="display.minAppsNeeded">The following calculation is based on 5 applications a day, 6 days a week</h4>
-                        <div ng-show="display.minAppsNeeded">
+                        <div class="shadow" ng-show="display.minAppsNeeded">
                             <h2>You've applied for <span class="neutral"> {{display.min.daysApplied}} </span> days. You should've applied to at least <span class="neutral"> {{display.min.minAppsNeeded}} </span> apps </h2>
                             <h3> You've completed <span ng-class="{bad: display.min.lost, good: display.min.saved, neutral: display.min.breakEven}"> {{appsCompleted}} </span> apps</h3>
                         </div>
-                        <h2 class="bad" ng-show="display.min.lost"> You've lost ~ {{display.min.amountLost}} - {{display.max.amountLost}}. You need to apply to 8 apps/day for {{display.min.daysToCatchUp}} days to catch up</h2>
-                        <h2 class="good" ng-show="display.min.saved">You've saved ~{{display.min.amountSaved}} - {{display.max.amountSaved}}. You've kaled it!</h2>
-                        <h2 class="neutral" ng-show="display.min.breakEven">Good job keeping it up with the minimum standards. You've kaled it!</h2>
+                        <h2 class="bad shadow" ng-show="display.min.lost"> You've lost ~ {{display.min.amountLost}} - {{display.max.amountLost}}. You need to apply to 8 apps/day for {{display.min.daysToCatchUp}} days to catch up</h2>
+                        <h2 class="good shadow" ng-show="display.min.saved">You've saved ~{{display.min.amountSaved}} - {{display.max.amountSaved}}. You've kaled it!</h2>
+                        <h2 class="neutral shadow" ng-show="display.min.breakEven">Good job keeping it up with the minimum standards. You've kaled it!</h2>
                         <div ng-hide="display.min.lost || display.min.saved || display.min.breakEven">
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="salary-min">Minimum Desired Salary <br> <div class="author">(Numbers Only)</div></label>
-                                <input name="salary-min" class="form" type="number" placeholder="70000" ng-model="minDesired">
+                                <label for="salary-min">Min. Desired Salary <br></label>
+                                <input name="salary-min" class="form" type="number" placeholder="Numbers Only" ng-model="minDesired">
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="salary-max">Maximum Desired Salary <br> <div class="author">(Numbers Only)</div></label>
-                                <input name="salary-max" class="form" type="number" placeholder="150000" ng-model="maxDesired">
+                                <label for="salary-max">Max. Desired Salary</label>
+                                <input name="salary-max" class="form" type="number" placeholder="Numbers Only" ng-model="maxDesired">
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="apps">Number of Apps Completed <br> <div class="author">(Numbers Only)</div></label>
-                                <input name="apps" class="form" type="number" placeholder="150" ng-model="appsCompleted">
+                                <label for="apps">Apps Completed <br></label>
+                                <input name="apps" class="form" type="number" placeholder="Numbers Only" ng-model="appsCompleted">
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 forms">
-                                <label for="dateStarted">Date Started<br> <div class="author">(Pick a Date)</div></label>
+                                <label for="dateStarted">Date Started to Apply<br></label>
                                 <input name="dateStarted" class="form" type="date" placeholder="mm/dd/yyyy" ng-model="startDate">
                             </div>
                         </div>

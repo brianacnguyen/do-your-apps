@@ -55,17 +55,20 @@ h6 {
 }
 
 .bad {
-    color: #b94a48;
+    color: #FF333D;
 }
 
 .good {
-    color: #468847;
+    color: #FFF533;
 }
 
 .neutral {
-    color: #3a87ad;
+    color: #33FFF5;
 }
 
 .author {
     color: #ADADAD;
+} 
+.shadow {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
